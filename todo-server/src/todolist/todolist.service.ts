@@ -25,8 +25,9 @@ export class TodolistService {
     }
   }
 
-  async findOne(userid: number) {
+  async findOne(userid:number) {
     try {
+      console.log(userid)
       const result = await this.todolist.find({ where: { userid } });
       return {
         error: 0,
@@ -36,13 +37,12 @@ export class TodolistService {
     } catch (e) {
       return {
         error: e,
-        msg: 'ok',
+        msg: 'not fined',
       };
     }
   }
 
   async update(data) {
-    console.log(data);
     try {
       const result = await this.todolist.update(data.id, data);
       if (result) {

@@ -26,10 +26,26 @@ export class UserService {
     }
   }
 
-  findAll() {
-    return `This action returns all user`;
+  /**
+   * 验证用户名是否已存在
+   * @param username
+   * true 表示没有username false 表示有username
+   */
+  async check(username:string){
+    try {
+      const result = await this.user.findOneBy({ username });
+      if (result===null){
+        return 0
+      }else {
+        return 1
+      }
+    }catch (e){
+      return{
+        error:e,
+        msg:'failed'
+      }
+    }
   }
-
   async findOne(username: string) {
     try {
       const result = await this.user.findOneBy({ username });
@@ -50,9 +66,5 @@ export class UserService {
 
   update(id: number) {
     return `This action updates a #${id} user`;
-  }
-
-  remove(id: number) {
-    return `This action removes a #${id} user`;
   }
 }

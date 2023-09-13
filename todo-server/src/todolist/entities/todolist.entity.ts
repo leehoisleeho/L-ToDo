@@ -13,6 +13,8 @@ export class Todolist {
   @Column()
   time: string;
   @Column({ default: 0 })
+  done:number
+  @Column({ default: 0 })
   urgentState: number;
   @Column({ default: 0 })
   starState: number;
