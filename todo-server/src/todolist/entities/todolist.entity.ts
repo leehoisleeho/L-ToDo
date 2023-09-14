@@ -5,7 +5,7 @@ export class Todolist {
   @PrimaryGeneratedColumn()
   id: number;
   @Column()
-  userid: number;
+  uuid: string;
   @Column()
   title: string;
   @Column()

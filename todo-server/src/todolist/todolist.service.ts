@@ -8,7 +8,7 @@ export class TodolistService {
   constructor(
     @InjectRepository(Todolist) private readonly todolist: Repository<Todolist>,
   ) {}
-  async create(data) {
+  async create(data:any) {
     try {
       const result = await this.todolist.save(data);
       if (result) {
@@ -25,10 +25,9 @@ export class TodolistService {
     }
   }
 
-  async findOne(userid:number) {
+  async findOne(uuid:string) {
     try {
-      console.log(userid)
-      const result = await this.todolist.find({ where: { userid } });
+      const result = await this.todolist.find({ where: { uuid }});
       return {
         error: 0,
         msg: 'ok',

@@ -18,9 +18,9 @@ export class TodolistController {
     return this.todolistService.create(data);
   }
 
-  @Get('find/:userid')
-  find(@Param('userid') userid: number) {
-    return this.todolistService.findOne(userid);
+  @Get('find/:uuid')
+  find(@Param('uuid') uuid: string) {
+    return this.todolistService.findOne(uuid);
   }
 
   @Post('update')

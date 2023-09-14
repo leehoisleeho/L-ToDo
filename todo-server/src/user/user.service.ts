@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { User } from './entities/user.entity';
+import { v4 as uuidv4 } from 'uuid';
 @Injectable()
 export class UserService {
   constructor(
@@ -10,6 +11,8 @@ export class UserService {
 
   async create(data: any) {
     try {
+      const uuid =uuidv4().replace(/-/g, '');
+      data.uuid = uuid
       const result = await this.user.save(data);
       if (result) {
         return {
