@@ -1,0 +1,23 @@
+{
+  "name": "L-ToDo",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxt/devtools": "latest",
+    "@vant/nuxt": "^1.0.3",
+    "nuxt": "^3.7.1",
+    "vant": "^4.6.8"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "postcss": "^8.4.29",
+    "postcss-px-to-viewport": "^1.1.1",
+    "postcss-px-to-viewport-8-plugin": "^1.2.2"
+  }
+}

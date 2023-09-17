@@ -1,0 +1,1 @@
+.page-enter-active{transition:all .4s}.page-enter-from{transform:translate(100vw)}.page-leave-to{transform:translate(-100vw)}body{font-family:alimama;overflow:auto}@font-face{font-family:alimama;src:url(./frnF0ZjoxtLA.1ec8ff32.woff);src:url(./frnF0ZjoxtLA.ce5695e6.woff2)}#app{width:100vw}*{box-sizing:border-box;list-style:none;margin:0;padding:0}
